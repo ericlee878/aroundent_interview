@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# SWE-Interview-Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+This repository contains a full-stack web application for managing products. The frontend is a React application, while the backend is powered by Express.js. The application allows users to view products, and delete them via the UI. The backend provides API routes for fetching and deleting products.
 
-## Available Scripts
+## Table of Contents
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Backend API Routes](#backend-api-routes)
+- [Frontend](#frontend)
+- [Backend](#backend)
+- [Contributing](#contributing)
+- [License](#license)
 
-In the project directory, you can run:
+## Features
+- Display a list of products fetched from the backend API.
+- Delete products from the list using a delete button in the UI.
+- Responsive UI built with Material-UI.
+- User-friendly notifications using Snackbar for feedback on operations.
 
-### `npm start`
+## Technologies Used
+- **Frontend**: React, Material-UI
+- **Backend**: Node.js, Express.js, CORS
+- **API**: REST API
+- **Package Managers**: npm
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
+Ensure you have the following installed:
+- Node.js
+- npm (comes with Node.js)
 
-### `npm test`
+### Steps to Install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-repo/swe-interview-test.git
+    ```
 
-### `npm run build`
+2. Navigate to the project directory:
+    ```bash
+    cd swe-interview-test/StarterCode
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Navigate to the `frontend` directory and install the dependencies:
+    ```bash
+    cd frontend
+    npm install
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Navigate to the `backend` directory and install the dependencies:
+    ```bash
+    cd ../backend
+    npm install
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+### Running the backend server
+1. Navigate to the `backend` folder:
+    ```bash
+    cd backend
+    ```
+2. Start the backend server:
+    ```bash
+    node index.js
+    ```
+3. The server will run at `http://localhost:3001`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Running the frontend app
+1. Open a new terminal and navigate to the `frontend` folder:
+    ```bash
+    cd frontend
+    ```
+2. Start the frontend app:
+    ```bash
+    npm start
+    ```
+3. The React app will open in your default browser at `http://localhost:3000`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Backend API Routes
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### GET `/api/products`
+- **Description**: Fetch the list of products.
+- **Response**: A JSON array of product objects.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### DELETE `/api/products/:id`
+- **Description**: Deletes a product with the specified `id`.
+- **Response**: A JSON message confirming the deletion or an error message.
 
-## Learn More
+## Frontend
+The frontend is built using React and Material-UI to display the list of products in cards. You can delete products from the list by clicking the delete button on each card.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Backend
+The backend uses Express.js to handle API requests. It provides two endpoints:
+- `GET /api/products`: Returns the list of products.
+- `DELETE /api/products/:id`: Deletes a product by its ID.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
+Feel free to fork this repository and submit pull requests. For major changes, please open an issue to discuss what you would like to change.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+This project is licensed under the MIT License.
