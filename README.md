@@ -11,8 +11,6 @@ This repository contains a full-stack web application for managing products. The
 - [Backend API Routes](#backend-api-routes)
 - [Frontend](#frontend)
 - [Backend](#backend)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 - Display a list of products fetched from the backend API.
@@ -98,9 +96,3 @@ The frontend is built using React and Material-UI to display the list of product
 The backend uses Express.js to handle API requests. It provides two endpoints:
 - `GET /api/products`: Returns the list of products.
 - `DELETE /api/products/:id`: Deletes a product by its ID.
-
-## Contributing
-Feel free to fork this repository and submit pull requests. For major changes, please open an issue to discuss what you would like to change.
-
-## License
-This project is licensed under the MIT License.
